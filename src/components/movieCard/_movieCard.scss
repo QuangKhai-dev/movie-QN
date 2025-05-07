@@ -1,0 +1,37 @@
+.movie-card {
+    width: 300px;
+    height: 450px;
+    border-radius: $br-10;
+    overflow: hidden;
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-color: $black;
+        opacity: 0;
+        transition: opacity .5s ease;
+    }
+    &__img{
+        object-fit: cover;
+        height: 100%;
+    }
+    &__btns{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%) scale(0);
+        transition: transform .5s ease;
+    }
+    @media (hover: hover) and (pointer: fine) {
+        &:hover::before {
+            opacity: 0.8;
+        }
+        &:hover &__btns {
+            transform: translate(-50%, -50%) scale(1);
+        }
+    }
+}

@@ -1,0 +1,22 @@
+//helper
+@import './helpers/variables';
+@import './helpers/mixin';
+
+//base
+@import './base/reset';
+
+//components
+@import './components/button';
+@import '../components/modals/trailer';
+@import '../components/banner/banner';
+@import '../components/header/header';
+@import '../components/loading/loading';
+@import '../components/movieCard/movieCard';
+@import '../components/userNav/userNav';
+
+//pages
+@import '../pages/movie/movie';
+@import '../pages/error/error';
+
+//layout
+@import '../layouts/userLayout/userLayout';

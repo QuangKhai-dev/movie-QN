@@ -1,0 +1,29 @@
+.banner {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    z-index: 50;
+    &__overlay {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-color: rgba($color: $black, $alpha: 0.4);
+        @include flex(center, center);
+        &-left {
+            width: 350px;
+            height: 525px;
+            border-radius: $br-10;
+        }
+        &-right{
+            padding-left: $r-48;
+            width: 50%;
+            h2{
+                font-size: $r-40;
+                font-weight: $fw-500;
+                color: $white;
+            }
+        }
+    }
+}

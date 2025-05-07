@@ -1,0 +1,56 @@
+.navbar{
+    @include flex(space-around,center);
+    position: fixed;
+    width: 100%;
+    padding: $r-32 0;
+    z-index: 99;
+    transition: all .5s ease;
+    &.shrink{
+        padding: 10px 0;
+        background-color: rgba($color: $black, $alpha: 0.7)
+    }
+    &-navs{
+        @include flex(center,center);
+        color: $white;
+        font-size: $r-20;
+        font-weight: $fw-700;
+        &_item{
+            padding-left: $r-32;
+            &>a{
+                position: relative;
+                transition: all .5s ease;
+                padding: $r-15 - 0.5;
+                &::after,&::before{
+                    content:'';
+                    height: 2px;
+                    width: 0;
+                    right: 0;
+                    background-color: $dark-orange;
+                    position: absolute;
+                    transition: all .5s ease;
+                }
+                &::after{
+                    top: 0
+                }
+                &::before{
+                    bottom: 0
+                }
+
+            }
+            &>a:hover,&>a.active{
+                color: $dark-orange;
+                &::after,&::before{
+                    width: 100%;
+                }
+            }
+        }
+    }
+    &-logo{
+        font-size: $r-40;
+        font-weight: $fw-700;
+        color: $dark-orange;
+        &:hover{
+            color: $dark-orange;
+        }
+    }
+}

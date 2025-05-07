@@ -1,0 +1,45 @@
+.user{
+    position: relative;
+    &__name{
+        color:$white;
+        font-weight: bold;
+        font-size: $r-30;
+        margin-right: $r-20;
+    }
+    &__menu{
+        position: absolute;
+        background-color: $white;
+        overflow: hidden;
+        bottom: -120px;
+        width: 100%;
+        opacity: 0;
+        visibility: hidden;
+        border-radius: $br-10;
+        text-align: center;
+        transition: all .5s ease;
+        &>li{
+            padding: 10px;
+            cursor: pointer;
+            font-size: $r-15;
+            transition: all .5s ease;
+            &>a{
+                transition: all .5s ease;
+            }
+        }
+        &>li:first-child{
+            border-bottom: 1px solid $black;
+        }
+        &>li:hover{
+            color: $white;
+            background-color: $black;
+            &>a{
+                color:$white;
+            }
+        }
+    }
+
+    &:hover &__menu{
+        opacity: 1;
+        visibility: visible;
+    }
+}

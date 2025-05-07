@@ -1,0 +1,12 @@
+.modals {
+    background-color: $black !important;
+    &>.ant-modal-content{
+        padding: 0;
+        overflow: hidden;
+    }
+    iframe {
+        width: 910px;
+        display: block;
+        border-radius: $br-10;
+    }
+}

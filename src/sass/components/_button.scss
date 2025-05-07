@@ -1,0 +1,24 @@
+.btns{
+    display: inline-block;
+    padding: $r-15 $r-30;
+    user-select: none;
+    font-weight: $fw-bold;
+    font-size: $r-15;
+    cursor: pointer;
+    border-radius: $br-10;
+    transition: all .5s ease;
+}
+
+.btns-orange{
+    @include styleButton($white,$dark-orange,$dark-orange);
+    &:hover{
+        @include styleHoverButton($white,transparent,$dark-orange);
+    }
+}
+
+.btns-outline-orange{
+    @include styleButton($white,transparent,$dark-orange);
+    &:hover{
+        @include styleHoverButton($white,$dark-orange,$dark-orange);
+    }
+}
